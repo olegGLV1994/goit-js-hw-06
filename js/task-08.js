@@ -10,14 +10,10 @@ function onSubmitInput(event) {
     mail,
     password,
   };
-  console.log(formEl);
 
-  const formData = new FormData(event.currentTarget);
-  formData.forEach((value) => {
-    if (value === "") {
-      alert("Все поля должны быть заполнены");
-    }
-    event.currentTarget.reset();
-  });
+  if (mail === "" || password === "") {
+    return alert("Все поля должны быть заполнены");
+  }
+  console.log(`Email: ${mail}, Password: ${password}`);
+  event.currentTarget.reset();
 }
-
