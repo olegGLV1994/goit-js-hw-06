@@ -20,3 +20,4 @@ function onSubmitInput(event) {
     event.currentTarget.reset();
   });
 }
+
